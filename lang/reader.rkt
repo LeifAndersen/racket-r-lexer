@@ -67,7 +67,7 @@
    (KnownTypes (re:or "boolean" "integer" "string"))
    (Keyword (re:or "if" "else" "this" "function"))
    (Operator (re:or "=" ">" "<" "!" "~" "?" ":" "==" "<=" ">=" "!=" "&&" "||" "+"
-                   "-" "*" "/" "&" "|" "^" "%" "<<" ">>" "<-" "<<-"))
+                   "-" "*" "/" "&" "|" "^" "%" "<<" ">>" "<-" "<<-" "%in%"))
    (CR #\015)
    (LF #\012)
    (LineTerminator (re:or CR
@@ -112,7 +112,7 @@
    (Operator (syn-val lexeme 'parenthesis #f start-pos end-pos))
    ((char-set "(){}[];,.")
     (syn-val lexeme 'parenthesis (string->symbol lexeme) start-pos end-pos))
-   ((re:or "NULL" "True" "False"
+   ((re:or "NULL" "TRUE" "FALSE"
            (re:: #\' (re:~ CR LF #\' #\\) #\')
            (re:: #\' EscapeSequence #\')
            FloatA FloatB FloatC
