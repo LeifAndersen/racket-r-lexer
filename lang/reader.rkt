@@ -65,7 +65,7 @@
    (RLetter (re:or (re:/ "AZ" "az") "_" "$"))
    (RLetterOrDigit (re:or RLetter (re:/ "09")))
    (KnownTypes (re:or "boolean" "integer" "string"))
-   (Keyword (re:or "if" "else" "this" "function"))
+   (Keyword (re:or "if" "else" "this" "function" "for" "while" "in"))
    (Operator (re:or "=" ">" "<" "!" "~" "?" ":" "==" "<=" ">=" "!=" "&&" "||" "+"
                    "-" "*" "/" "&" "|" "^" "%" "<<" ">>" "<-" "<<-" "%in%"))
    (CR #\015)
