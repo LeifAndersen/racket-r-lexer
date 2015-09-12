@@ -1,7 +1,9 @@
 #lang info
 (define collection "r-lexer")
 (define deps '("base"
-               "rackunit-lib"))
+               "rackunit-lib"
+               "scribble-lib"
+               "parser-tools-lib"))
 (define build-deps '("scribble-lib" "racket-doc"))
 (define scribblings '(("scribblings/r-lexer.scrbl" ())))
 (define pkg-desc "Lexer for R")
