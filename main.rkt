@@ -18,4 +18,4 @@
                   #:keep-lang-line? #f #:context #'arg
                 "#lang r-lexer\n" arg args ...)]))
 (define-syntax-rule (R arg args ...)
-  (make-element (make-style "RktBlk" '(tt-chars)) (code #:lang "r-lexer" arg args ...)))
+  (make-element (make-style #f '(tt-chars)) (code #:lang "r-lexer" arg args ...)))
